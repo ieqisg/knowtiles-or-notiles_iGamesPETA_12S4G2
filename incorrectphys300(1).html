@@ -9,7 +9,7 @@
         text-align: center;
         padding: 5rem;
         font-size: 30px;
-        background: #033890;
+        background: url(images/GEN\ PHYS.jpg);
         font-family: 'Poppins', sans-serif;
     }
   
@@ -23,26 +23,31 @@
     .correct{
         font-size: 35px;
     }
+    .result h1, h4{
+      color: white;
+      background: rgba(0, 0, 0, .5);
+      border-radius: 20px;
+    }
     </style>
     <div class="result">
         <h1>Incorrect answer!</h1>
-        <h1 class="correct">4.0 W/m^2 </h1>
+        <h1 class="correct">Correct Answer: 4.0 W/m^2 </h1>
         <h4>Solution: Formula for Malus’ Law: I = I₀ * cos²(θ)
 
           Given:		
-          initial intensity of light (I₀) = 8.0 W/m^2  angle (θ) between the polarizer and the direction of polarization = 45 degrees ->
+          initial intensity of light (I₀) = 8.0 W/m^2  angle (θ) between the polarizer and the direction of polarization = 45 degrees 
           
-          I = 8.0 W/m^2  * cos²(45°) ->
+          I = 8.0 W/m^2  * cos²(45°) 
           
-          cos(45°) = 0.7071 ->
+          cos(45°) = 0.7071 
           
-          I = 8.0 W/m^2  * (0.7071)² ->
+          I = 8.0 W/m^2  * (0.7071)² 
           
-          I ≈ 8.0 W/m^2  * 0.5 ->
+          I ≈ 8.0 W/m^2  * 0.5 
           
           I ≈ 4.0 W/m^2
           </h4>
-        <button id="continueBtn">Continue -----></button>
+        <button id="continueBtn">Continue</button>
     </div>
     <body>
       <audio autoplay src="incorrect.mp3"></audio>

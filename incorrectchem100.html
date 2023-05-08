@@ -4,26 +4,35 @@
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
     body{
-      display: flex;
-      justify-content: center;
-      text-align: center;
-      padding: 300px;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        padding: 5rem;
+        font-size: 30px;
+        background: url(images/GEN\ CHEM.jpg);
+        font-family: 'Poppins', sans-serif;
+    }
+  
+  
+    button{
       font-size: 30px;
-      background: #033890;
-      font-family: 'Poppins', sans-serif;
-  }
+      border-radius: 20px;
+      background: gold;
+    }
 
-
-  button{
-    font-size: 50px;
-    border-radius: 20px;
-    background: gold;
-  }
+    .correct{
+        font-size: 35px;
+    }
+    .result h1, h4{
+      color: white;
+      background: rgba(0, 0, 0, .5);
+      border-radius: 20px;
+    }
   </style>
   <div class="result">
       <h1>Incorrect answer!</h1>
       <h1>Correct Answer: Entropy</h1>
-      <button id="continueBtn">Continue -----></button>
+      <button id="continueBtn">Continue </button>
   </div>
   <body>
     <audio autoplay src="incorrect.mp3"></audio>

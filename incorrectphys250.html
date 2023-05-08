@@ -7,9 +7,9 @@
         display: flex;
         justify-content: center;
         text-align: center;
-        padding: 3rem;
+        padding: 5rem;
         font-size: 30px;
-        background: #033890;
+        background: url(images/GEN\ PHYS.jpg);
         font-family: 'Poppins', sans-serif;
     }
   
@@ -23,24 +23,29 @@
     .correct{
         font-size: 35px;
     }
+    .result h1, h4{
+      color: white;
+      background: rgba(0, 0, 0, .5);
+      border-radius: 20px;
+    }
     </style>
     <div class="result">
         <h1>Incorrect answer!</h1>
         <h1 class="correct">Correct Answer: 48°</h1>
-        <h4>Solution: sin(θ_c) = 1 / refractive index ->
+        <h4>Solution: sin(θ_c) = 1 / refractive index 
 
           Given that the refractive index of water is 1.33, we can find the critical angle as follows: 
           
-          sin(θ_c) = 1 / 1.33 ->
+          sin(θ_c) = 1 / 1.33 
           sin(θ_c) ≈ 0.7519 
           
           To find the maximum angle of refraction, we take the inverse sine (sin⁻¹) of the reciprocal of the refractive index:
           
-          θ_r = sin⁻¹(1 / refractive index) ->
-          θ_r = sin⁻¹(1 / 1.33) ->
-          θ_r ≈ 48.8° ->
+          θ_r = sin⁻¹(1 / refractive index) 
+          θ_r = sin⁻¹(1 / 1.33) 
+          θ_r ≈ 48.8° 
           </h4>
-        <button id="continueBtn">Continue -----></button>
+        <button id="continueBtn">Continue </button>
     </div>
     <body>
       <audio autoplay src="incorrect.mp3"></audio>

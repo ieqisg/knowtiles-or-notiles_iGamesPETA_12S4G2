@@ -7,9 +7,9 @@
         display: flex;
         justify-content: center;
         text-align: center;
-        padding: 10rem;
+        padding: 5rem;
         font-size: 30px;
-        background: #033890;
+        background: url(images/GEN\ PHYS.jpg);
         font-family: 'Poppins', sans-serif;
     }
   
@@ -23,14 +23,19 @@
     .correct{
         font-size: 35px;
     }
+    .result h1, h4{
+      color: white;
+      background: rgba(0, 0, 0, .5);
+      border-radius: 20px;
+    }
     </style>
     <div class="result">
         <h1>Incorrect answer!</h1>
         <h1 class="correct">Correct Answer: 0.003125 </h1>
-        <h3>Solution: R = (I )/V ->
-          R = 3/(  960) ->
+        <h3>Solution: R = (I )/V 
+          R = 3/(  960) 
           R = 0.003125</h3>
-        <button id="continueBtn">Continue -----></button>
+        <button id="continueBtn">Continue</button>
     </div>
     <body>
       <audio autoplay src="incorrect.mp3"></audio>

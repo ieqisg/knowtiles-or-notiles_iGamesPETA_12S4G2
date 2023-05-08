@@ -9,9 +9,14 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
         body{
-        background: #033890;
-        font-family: 'Poppins', sans-serif;
+            font-family: 'Poppins', sans-serif;
+            background-image: url(images/GEN\ CHEM.jpg);
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
         }
+
 
         .choices{
         display: flex;
@@ -31,15 +36,26 @@
         justify-content: center;
         font-size: 1rem;
         margin-bottom: 50px;
+        background-color: rgba(0, 0, 0, .5);
+        color: white;
+        border-radius: 20px;
         }
 
         button{
         font-size: 30px;
         border-radius: 20px;
-        background: transparent;
+        background: white;
         box-shadow: 0 15px 40px -20px black;
+        color: #cda227;
         height: 200px;
         width: 365px;
+        }
+        
+        button:hover{
+            color: white;
+            background: #cda227;
+            cursor: pointer;
+            transition: .9s;
         }
 
         .title{

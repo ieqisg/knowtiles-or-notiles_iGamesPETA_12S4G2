@@ -4,15 +4,20 @@
   <style>
     body{
       @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
-
       display: flex;
       justify-content: center;
       text-align: center;
       padding: 300px;
       font-size: 50px;
-      background: #033890;
+      background: url(images/CAL.jpg);
       font-family: 'Poppins', sans-serif;
   }
+    h1{
+      background: rgba(0, 0, 0, .5);
+      border-radius: 20px;
+      padding: 1rem;
+      color: white;
+    }
 
 
   button{
@@ -23,7 +28,7 @@
   </style>
   <div class="result">
       <h1>Correct answer!</h1>
-      <button id="continueBtn">Continue -----></button>
+      <button id="continueBtn">Continue</button>
   </div>
   <body>
     <audio autoplay src="correct.mp3"></audio>
