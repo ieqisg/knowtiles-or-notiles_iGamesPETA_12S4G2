@@ -1,0 +1,37 @@
+<body>
+  <style>
+    body{
+      @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+      display: flex;
+      justify-content: center;
+      text-align: center;
+      padding: 300px;
+      font-size: 50px;
+      background: #033890;
+      font-family: 'Poppins', sans-serif;
+  }
+
+
+  button{
+    font-size: 50px;
+    border-radius: 20px;
+    background: gold;
+  }
+  </style>
+  <div class="result">
+      <h1>Correct answer!</h1>
+      <button id="continueBtn">Continue -----></button>
+  </div>
+  <body>
+    <audio autoplay src="correct.mp3"></audio>
+  </body>
+
+  <script>
+      const continueBtn = document.querySelector('#continueBtn');
+      continueBtn.addEventListener('click', function() {
+        window.location.href = 'bio.html';
+      });
+  </script>
+</body>
+    

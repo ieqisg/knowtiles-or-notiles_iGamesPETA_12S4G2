@@ -1,0 +1,54 @@
+<body>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+      body{
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        padding: 3rem;
+        font-size: 30px;
+        background: #033890;
+        font-family: 'Poppins', sans-serif;
+    }
+  
+  
+    button{
+      font-size: 30px;
+      border-radius: 20px;
+      background: gold;
+    }
+
+    .correct{
+        font-size: 35px;
+    }
+    </style>
+    <div class="result">
+        <h1>Incorrect answer!</h1>
+        <h1 class="correct">Correct Answer: 48°</h1>
+        <h4>Solution: sin(θ_c) = 1 / refractive index ->
+
+          Given that the refractive index of water is 1.33, we can find the critical angle as follows: 
+          
+          sin(θ_c) = 1 / 1.33 ->
+          sin(θ_c) ≈ 0.7519 
+          
+          To find the maximum angle of refraction, we take the inverse sine (sin⁻¹) of the reciprocal of the refractive index:
+          
+          θ_r = sin⁻¹(1 / refractive index) ->
+          θ_r = sin⁻¹(1 / 1.33) ->
+          θ_r ≈ 48.8° ->
+          </h4>
+        <button id="continueBtn">Continue -----></button>
+    </div>
+    <body>
+      <audio autoplay src="incorrect.mp3"></audio>
+    </body>
+  
+    <script>
+        const continueBtn = document.querySelector('#continueBtn');
+        continueBtn.addEventListener('click', function() {
+          window.location.href = 'phys.html';
+        });
+    </script>
+  </body>
+      

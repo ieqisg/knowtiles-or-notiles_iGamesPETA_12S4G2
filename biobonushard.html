@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    
+    <title>Biology</title>
+    <style>
+      /* Style the form */
+      @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+      body{
+        overflow: hidden;
+        background: #033890;
+        font-family: 'Poppins', sans-serif;
+      }
+      form {
+        display: flex;
+        flex-direction: column; 
+        align-items: center; 
+        text-align: center;
+      }
+      label {
+        margin-top: 100px; 
+        margin-right: 130px;
+        margin-left: 130px;
+        padding: 30px;
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        font-size: 50px;
+      }
+      input[type="text"] {
+        padding: 25px;
+        border: 1px solid black;
+        margin-top: 20px;
+        width: 500px;
+        font-size: 40px;
+      }
+      input[type="submit"] {
+        padding: 10px;
+        background-color: blue;
+        color: white;
+        border: none;
+        cursor: pointer;
+        margin-top: 20px; 
+        font-size: 30px;
+        border-radius: 20px;
+      }
+      
+      h2{
+        font-size: 25px;
+      }
+
+      h1{
+        font-size: 40px;
+      }
+
+      
+
+
+    </style>
+  </head>
+  <body>
+    <form id="quiz-form">
+      <h1>Bonus Question</h1>
+      <label for="answer">List the six healthy sources of essential nutrients:</label>
+      <br>
+      <h2>Hint: P, M, W, V, F, and C</h2>
+      <input type="text" id="answer" name="answer">
+      <br>
+      <input type="submit" value="Submit">
+    </form>
+    <script>
+        let correctOrder = ['Proteins', 'Minerals', 'Water', 'Vitamins', 'Fats', 'Carbohydrates'];
+        
+        let quizForm = document.getElementById('quiz-form');
+
+        quizForm.addEventListener('submit', function(event) {
+        event.preventDefault();
+        let userAnswer = document.getElementById('answer').value;
+        if (isAnswerCorrect(userAnswer)) {
+            const body = document.querySelector('body');
+            body.innerHTML = '<h1>Correct answer!</h1>';
+            const score = parseInt(localStorage.getItem('score')) || 0;
+            localStorage.setItem('score', score + 350);
+            window.location.href = 'biocorrect.html';
+        } else {
+            window.location.href = 'incorrectbio350.html';
+            const score = parseInt(localStorage.getItem('score')) || 0;
+            localStorage.setItem('score', score - 350);
+            window.location.href = 'incorrectbio350.html';
+        }
+        });
+
+        function isAnswerCorrect(answer) {
+        let answerArr = answer.split(',').map(x => x.trim());
+        if (answerArr.length !== correctOrder.length) {
+            return false;
+        }
+        for (let i = 0; i < correctOrder.length; i++) {
+            if (answerArr[i] !== correctOrder[i]) {
+            return false;
+            }
+        }
+        return true;
+        }
+
+    </script>
+  </body>
+</html>

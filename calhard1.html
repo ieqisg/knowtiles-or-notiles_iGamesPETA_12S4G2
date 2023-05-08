@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Biology</title>
+</head>
+<body>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+        body{
+        background: #033890;
+        font-family: 'Poppins', sans-serif;
+        }
+
+        .choices{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+        margin-top: 50px;
+        gap: 2.5rem;
+        }
+
+        .question{
+        position: relative;
+        margin: 0 auto;
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        font-size: 25px;
+        margin-bottom: 50px;
+        }
+
+        button{
+        font-size: 2.5rem;
+        border-radius: 20px;
+        background: transparent;
+        box-shadow: 0 15px 40px -20px black;
+        height: 250px;
+        width: 300px;
+        }
+
+        h4{
+          display: flex;
+          justify-content: center;
+          text-align: center;
+          font-size: 1.5rem;
+        }
+
+    </style>
+    <div class="question">
+        <h1>Evaluate: ∫(x^4-6x^3+e^x √x)/√x  dx</h1>
+    </div>
+        <h4>Hint: Divide through by √x  before integrating.</h4>
+	<div class="choices">
+        <button> 3/9  x^(2/9)-13/5  x^(7/6)-e^x+c</button>
+        <button> 	9/2  x^(2/9)+7/8  x^(2/3)+e^x+c</button>
+        <button> 		5/9  x^(2/9)-11/5  x^(7/9)-e^x-c</button>
+        <button> 		2/9  x^(9/2)-12/7  x^(7/2)-e^x+c</button>
+
+    </div>
+	
+    <script>
+        const smallIntestineBtn = document.querySelector('button:nth-of-type(1)');
+        const stomachBtn = document.querySelector('button:nth-of-type(2)');
+        const largeIntestineBtn = document.querySelector('button:nth-of-type(3)');
+        const anusBtn = document = document.querySelector('button:nth-of-type(4)');
+        
+        // Add event listeners to the buttons
+        smallIntestineBtn.addEventListener('click', displayIncorrectAlert);
+        stomachBtn.addEventListener('click', displayIncorrectAlert);
+        largeIntestineBtn.addEventListener('click', displayIncorrectAlert);
+        anusBtn.addEventListener('click', addPointsAndReturn);
+        
+        function addPointsAndReturn() {
+          // Add 100 points to the score
+          const body = document.querySelector('body');
+          body.innerHTML = '<h1>Correct answer!</h1>';
+          const score = parseInt(localStorage.getItem('score')) || 0;
+          localStorage.setItem('score', score + 300);
+          window.location.href = 'calcorrect.html';
+          // Redirect to the main file
+          
+        }
+        
+        function displayIncorrectAlert() {
+          // Display an alert that the answer is incorrect
+          window.location.href = 'incorrectcal300(1).html';
+          const score = parseInt(localStorage.getItem('score')) || 0;
+          localStorage.setItem('score', score - 300);
+          // Redirect to the main file
+          
+        }
+    </script>
+</body>
+</html>

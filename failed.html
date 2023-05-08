@@ -1,0 +1,45 @@
+<body>
+    <style>
+      body{
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        padding: 300px;
+        font-size: 50px;
+        background: #033890;
+    }
+
+    .try{
+        height: 100px;
+        width: 500px;
+        font-size: 30px;
+        border-radius: 20px;
+        background: gold;
+    }
+
+    .try:hover{
+        background: blue;
+        color: white;
+        cursor: pointer;
+        transition: .6s;
+    }
+  
+  
+    
+    </style>
+    <div class="result">
+        <h1>You Failed!</h1>
+        <h3>BOBO MO!</h3>
+        <a href="index.html"><button class="try" id="continueBtn">Try Again</button></a>
+    </div>
+    <body>
+        <audio autoplay src="bobo.mp3"></audio>
+    </body>
+  
+      
+
+<script>
+    localStorage.setItem('score', 0);
+    
+
+</script>

@@ -1,0 +1,56 @@
+<body>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+      body{
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        padding: 5rem;
+        font-size: 30px;
+        background: #033890;
+        font-family: 'Poppins', sans-serif;
+    }
+  
+  
+    button{
+      font-size: 30px;
+      border-radius: 20px;
+      background: gold;
+    }
+
+    .correct{
+        font-size: 35px;
+    }
+    </style>
+    <div class="result">
+        <h1>Incorrect answer!</h1>
+        <h1 class="correct">4.0 W/m^2 </h1>
+        <h4>Solution: Formula for Malus’ Law: I = I₀ * cos²(θ)
+
+          Given:		
+          initial intensity of light (I₀) = 8.0 W/m^2  angle (θ) between the polarizer and the direction of polarization = 45 degrees ->
+          
+          I = 8.0 W/m^2  * cos²(45°) ->
+          
+          cos(45°) = 0.7071 ->
+          
+          I = 8.0 W/m^2  * (0.7071)² ->
+          
+          I ≈ 8.0 W/m^2  * 0.5 ->
+          
+          I ≈ 4.0 W/m^2
+          </h4>
+        <button id="continueBtn">Continue -----></button>
+    </div>
+    <body>
+      <audio autoplay src="incorrect.mp3"></audio>
+    </body>
+  
+    <script>
+        const continueBtn = document.querySelector('#continueBtn');
+        continueBtn.addEventListener('click', function() {
+          window.location.href = 'phys.html';
+        });
+    </script>
+  </body>
+      

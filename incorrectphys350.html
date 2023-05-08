@@ -1,0 +1,54 @@
+<body>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+      body{
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        padding: 5rem;
+        font-size: 30px;
+        background: #033890;
+        font-family: 'Poppins', sans-serif;
+    }
+  
+  
+    button{
+      font-size: 30px;
+      border-radius: 20px;
+      background: gold;
+    }
+
+    .correct{
+        font-size: 35px;
+    }
+    </style>
+    <div class="result">
+        <h1>Incorrect answer!</h1>
+        <h1 class="correct">Correct Answer: 0.873 g</h1>
+        <h4>Solution: n₁sin(θ₁) = n₂sin(θ₂)
+
+          Given that n₁ = 1.5,n₂ = 1.2,and θ₁ = 30 degrees, we can solve for θ₂:
+          
+          1.5sin(30°) = 1.2sin(θ₂) ->
+          0.75 = 1.2sin(θ₂) ->
+          sin(θ₂) =  (0.75 )/1.2 ->
+          sin(θ₂) ≈ 0.625 
+          
+          To find the angle of refraction, we take the inverse sine (sin⁻¹) of 0.625:
+          θ₂ ≈ sin⁻¹(0.625) ->
+          θ₂ ≈ 38.7° ->
+          </h4>
+        <button id="continueBtn">Continue -----></button>
+    </div>
+    <body>
+      <audio autoplay src="incorrect.mp3"></audio>
+    </body>
+  
+    <script>
+        const continueBtn = document.querySelector('#continueBtn');
+        continueBtn.addEventListener('click', function() {
+          window.location.href = 'phys.html';
+        });
+    </script>
+  </body>
+      

@@ -1,0 +1,42 @@
+<body>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+      body{
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        padding: 3rem;
+        font-size: 30px;
+        background: #033890;
+        font-family: 'Poppins', sans-serif;
+    }
+  
+  
+    button{
+      font-size: 30px;
+      border-radius: 20px;
+      background: gold;
+    }
+
+    .correct{
+        font-size: 35px;
+    }
+    </style>
+    <div class="result">
+        <h1>Incorrect answer!</h1>
+        <h1 class="correct">Correct Answer: 	2/9  x^(9/2)-12/7  x^(7/2)-e^x+cs </h1>
+        <h4>Solution: x^(-1/2) ( x^4-〖6x〗^3+e^x x^(1/2))</h4>
+        <button id="continueBtn">Continue -----></button>
+    </div>
+    <body>
+      <audio autoplay src="incorrect.mp3"></audio>
+    </body>
+  
+    <script>
+        const continueBtn = document.querySelector('#continueBtn');
+        continueBtn.addEventListener('click', function() {
+          window.location.href = 'cal.html';
+        });
+    </script>
+  </body>
+      

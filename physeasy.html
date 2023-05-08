@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Biology</title>
+</head>
+<body>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+        body{
+        background: #033890;
+        background-size: 100%;
+        font-family: 'Poppins', sans-serif;
+        }
+        .choices{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+        margin-top: 50px;
+        gap: 2.5rem;
+        }
+
+        .question{
+        position: relative;
+        margin: 0 auto;
+        padding: 30px;
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        font-size: 25px;
+        margin-bottom: 50px;
+        }
+
+        button{
+        font-size: 50px;
+        border-radius: 20px;
+        background: transparent;
+        box-shadow: 0 15px 40px -20px black;
+        height: 200px;
+        width: 300px;
+        }
+
+    </style>
+	<div class="question">
+    <h1>A passive electrical component that opposes sudden changes in current by storing energy in a magnetic field and then releasing it back to the circuit?</h1>
+    </div>
+    
+    <div class="choices">
+        <button>Capacitor</button>
+        <button>LC Circuits</button>
+        <button>Inductors</button>
+        
+    </div>
+	
+    <script>
+        const smallIntestineBtn = document.querySelector('button:nth-of-type(1)');
+        const stomachBtn = document.querySelector('button:nth-of-type(2)');
+        const largeIntestineBtn = document.querySelector('button:nth-of-type(3)');
+
+
+        // Add event listeners to the buttons
+        smallIntestineBtn.addEventListener('click', displayIncorrectAlert);
+        stomachBtn.addEventListener('click', displayIncorrectAlert);
+        largeIntestineBtn.addEventListener('click', addPointsAndReturn);
+        
+        
+        function addPointsAndReturn() {
+            // Add 100 points to the score
+            const body = document.querySelector('body');
+            body.innerHTML = '<h1>Correct answer!</h1>';
+            const score = parseInt(localStorage.getItem('score')) || 0;
+            localStorage.setItem('score', score + 100);
+            
+            // Play the sound of correct.mp3
+    
+            
+            // Redirect to the main file
+            window.location.href = 'physcorrect.html';
+            }
+        
+        function displayIncorrectAlert() {
+          // Display an alert that the answer is incorrect
+          window.location.href = 'incorrectphys100.html';
+          const score = parseInt(localStorage.getItem('score')) || 0;
+          localStorage.setItem('score', score - 100);
+          // Redirect to the main file
+          
+        }
+    </script>
+</body>
+</html>

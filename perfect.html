@@ -1,0 +1,46 @@
+<body>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+      body{
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        padding: 300px;
+        font-size: 50px;
+        background: #033890;
+        font-family: 'Poppins' ,sans-serif;
+    }
+
+    .try{
+        height: 100px;
+        width: 500px;
+        font-size: 30px;
+        border-radius: 20px;
+        background: gold;
+    }
+
+    .try:hover{
+        background: blue;
+        color: white;
+        cursor: pointer;
+        transition: .6s;
+    }
+  
+  
+    
+    </style>
+    <div class="result">
+        <h1>Congratulations!</h1>
+        <a href="index.html"><button class="try" id="continueBtn">Next Subject</button></a>
+    </div>
+    <body>
+        <audio autoplay src="congrats.mp3"></audio>
+    </body>
+  
+      
+
+<script>
+    localStorage.setItem('score', 0);
+    
+
+</script>

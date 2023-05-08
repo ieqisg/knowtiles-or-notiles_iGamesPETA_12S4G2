@@ -1,0 +1,302 @@
+<title>General Chemistry</title>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    
+    <div class="heading">
+        
+        <h2>Score: <span id="score">0</span></h2>
+    </div>
+    <a href="subjects.html"><button  class="fa-solid fa-house" ></button></a>
+
+    
+    
+	<script type="text/javascript">
+        
+        window.addEventListener("beforeunload", function(event) {
+            // Clear any variables or data stored in memory
+            // Reset the DOM to its initial state
+        });
+
+        window.onload = function() {
+        const scoreEl = document.querySelector('#score');
+        const score = localStorage.getItem('score') || 0;
+        scoreEl.textContent = score;
+        
+
+        
+
+        // Check if score is 1000 or greater, redirect to failed.html
+        if (score <= -1500) {
+            window.location.href = "failed.html";
+        }
+        else if(score >=6200){
+            window.location.href = "perfect.html"
+        }
+        
+    
+
+        const resetBtn = document.querySelector('#reset-btn');
+        resetBtn.addEventListener('click', function() {
+            localStorage.setItem('score', 0);
+            scoreEl.textContent = 0;
+            const bioeasyBtn = document.querySelector('#bioeasy-btn');
+            bioeasyBtn.disabled = false;
+            bioeasyBtn.removeAttribute('clicked');
+            bioeasyBtn.removeAttribute('style');
+
+            // Check if score is 1000 or greater, redirect to failed.html
+        });
+        window.addEventListener('load', function() {
+        const bioBtns = document.querySelectorAll('.bio');
+        shuffle(bioBtns);
+        });
+
+        
+
+
+    };
+
+
+	</script>
+    
+    <style>
+     
+     @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+        
+*{
+       box-sizing: border-box;
+   }
+   
+   .reset{
+       height: 100px;
+       width: 100px;
+       border-radius: 20px;
+       position: relative;
+       top: 30px;
+       color: white;
+   }
+   .reset:hover{
+       background: silver;
+       transition: .5s;
+   }
+
+   .fa-house{
+       height: 100px;
+       width: 100px;
+       border-radius: 20px;
+       color: white;
+       font-size: 50px;
+       
+   }
+
+   .heading{
+       display: flex;
+       color: white;
+       justify-content: right;
+       text-align: right;
+   }   
+
+   h1{
+       display: flex;
+       text-align: center;
+       justify-content: center;
+       font-size: 2rem;
+       color: white;
+   }
+   
+
+   body{
+       font-family: 'Poppins', sans-serif;
+       background-image: url(images/GEN\ CHEM.jpg);
+       background-position: center center;
+       background-repeat: no-repeat;
+       background-attachment: fixed;
+       background-size: cover;
+   }
+
+   th{
+       font-size: 30px;
+       color: white;
+   }
+
+   td {
+       text-align: center;
+      
+   }
+
+     
+
+   button{
+       height: 100%;
+       width: 100%;
+       background: #dca227;
+       font-weight: bold;
+       font-size: 20px;
+   }
+   
+   button:hover{
+       cursor: pointer;
+       background: white;
+       color: #ff8646;
+       transition: .8s;
+   }
+
+   
+   
+   
+   table{
+       width: 100%;
+       border-collapse: collapse;
+       color: white;
+   }
+
+   .bio{
+       font-size: 50px;
+       opacity: 1;
+       color:  #dca227;
+       background-color: white;
+       height: 18rem;
+   }
+   .points .bio:hover{
+       color: white;
+       background: #dca227;
+   }
+
+   
+   .bio.grey-bg {
+       background-color: grey;
+   }
+
+   .points{
+     padding: 3rem;
+   }
+
+
+   @media (max-width:892px){
+
+       .bio{
+           font-size: 30px;
+       }
+
+       .reset{
+           height: 60px;
+           width: 60px;
+           font-size: 15px;
+       }
+
+       h2{
+           position: relative;
+           top: 1px;
+       }
+
+       th{
+           font-size: 20px;
+       }
+
+       .fa-house{
+           height: 60px;
+           width: 60px;
+           font-size: 20px;
+       }
+       
+   }
+
+   @media (max-width:631px){
+
+       .bio{
+           font-size: 30px;
+           height: 190px;
+       }
+       
+       
+       th{
+           font-size: 20px;
+       }
+
+       h2{
+           font-size: 20px;
+       }
+
+       
+   }
+
+   @media (max-width:549px){
+       th{
+       font-size: 15px;
+       }
+   }
+
+   @media (max-width:420px){
+       .bio{
+           height: 8rem;
+       }
+   }
+
+
+@media (max-width:320px){
+   h2{
+       font-size: 10px;
+   }
+
+   
+
+   .bio{
+       height: 200px;
+   }
+
+   
+
+   @media (max-width:320px){
+     .bio{
+       font-size: 1rem;
+     }
+   }
+
+}
+    
+    
+
+
+    
+
+    
+
+    
+    
+    
+</style>
+
+<script>
+    
+    
+</script>
+  <div class="points">
+      <table style="border: 1px solid black;" >
+          
+          <tr>
+              <td style="border: 1px solid black;"><a href="chemeasy.html"><button class="bio" id="button1">100</button></td></a>
+              <td style="border: 1px solid black;"><a href="chembonushard.html"><button class="bio" id="myButton" data-clicked="false">350</button></td></a>
+              <td style="border: 1px solid black;"><a href="chemaverage.html"><button class="bio" id="myButton" data-clicked="false">200</button></td></a>
+            
+          </tr>
+          <tr>
+              <td style="border: 1px solid black;"><a href="chembonusaverage.html"><button class="bio" id="myButton" data-clicked="false">250</button></td></a>
+              <td style="border: 1px solid black;"><a href="chemeasy1.html"><button class="bio" id="myButton" data-clicked="false">100</button></td></a>
+              <td style="border: 1px solid black;"><a href="chemhard.html"><button class="bio" id="myButton" data-clicked="false">300</button></td></a>
+            
+          </tr>
+          <tr>
+              <td style="border: 1px solid black;"><a href="chemhard1.html"><button class="bio" id="myButton" data-clicked="false">300</button></td></a>
+              <td style="border: 1px solid black;"><a href="chemaverage1.html"><button class="bio" id="myButton" data-clicked="false">200</button></td></a>
+              <td style="border: 1px solid black;"><a href="chembonuseasy.html"><button class="bio" id="myButton" data-clicked="false">150</button></td></a>
+            
+          </tr>
+    
+    </table>
+  </div>
+</body>
+</html>

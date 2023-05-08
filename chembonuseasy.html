@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Biology</title>
+</head>
+<body>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+        body{
+        background: #033890;
+        font-family: 'Poppins', sans-serif;
+        }
+
+        .choices{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+        margin-top: 50px;
+        gap: 2.5rem;
+        }
+
+        .question{
+        position: relative;
+        margin: 0 auto;
+        padding: 30px;
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        font-size: 25px;
+        margin-bottom: 50px;
+        }
+
+        button{
+        font-size: 50px;
+        border-radius: 20px;
+        background: transparent;
+        box-shadow: 0 15px 40px -20px black;
+        height: 200px;
+        width: 300px;
+        }
+
+        .title{
+            position: relative;
+            margin: 0 auto;
+            padding: 30px;
+            display: flex;
+            text-align: center;
+            justify-content: center;
+            font-size: 40px;
+            margin-bottom: 50px;
+        }
+        
+
+    </style>
+    <h1 class="title">Bonus Question</h1>
+	<div class="question">
+    <h1>Which of the following is a factor affecting entropy? </h1>
+    </div>
+    
+    <div class="choices">
+        <button>Pressure</button>
+        <button>Temperature</button>
+        <button>Volume</button>
+        <button>All of the Choices</button>
+        
+    </div>
+	
+    <script>
+        const smallIntestineBtn = document.querySelector('button:nth-of-type(1)');
+        const stomachBtn = document.querySelector('button:nth-of-type(2)');
+        const largeIntestineBtn = document.querySelector('button:nth-of-type(3)');
+        const anus = document.querySelector('button:nth-of-type(4)');
+
+
+        // Add event listeners to the buttons
+        smallIntestineBtn.addEventListener('click', displayIncorrectAlert);
+        stomachBtn.addEventListener('click', addPointsAndReturn);
+        largeIntestineBtn.addEventListener('click', displayIncorrectAlert);
+        anus.addEventListener('click', displayIncorrectAlert);
+        
+        
+        function addPointsAndReturn() {
+            // Add 100 points to the score
+            const body = document.querySelector('body');
+            body.innerHTML = '<h1>Correct answer!</h1>';
+            const score = parseInt(localStorage.getItem('score')) || 0;
+            localStorage.setItem('score', score + 150);
+            
+            // Play the sound of correct.mp3
+    
+            
+            // Redirect to the main file
+            window.location.href = 'chemcorrect.html';
+            }
+        
+        function displayIncorrectAlert() {
+          // Display an alert that the answer is incorrect
+          window.location.href = 'incorrectchem150.html';
+          const score = parseInt(localStorage.getItem('score')) || 0;
+          localStorage.setItem('score', score - 150);
+          // Redirect to the main file
+          
+        }
+    </script>
+</body>
+</html>

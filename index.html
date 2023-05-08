@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Main</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            
+            
+            
+        }
+        html{
+            background: url(images/HOME\ PAGE.jpg);
+            height: 110vh;
+            background-size: cover;
+            background-repeat: no-repeat;
+            
+            
+            
+        }
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .title {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 1rem;
+            
+        }
+        .title h1 {
+            margin: 0;
+            font-size: 100px;
+        }
+        .icons {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 1rem;
+            gap: 10.5rem;
+            font-size: 30px;
+        }
+
+        .fa-play{
+            font-size: 30px;
+            background: white;
+        }
+
+        .fa-circle-info{
+            font-size: 30px;
+            background: white;
+        }
+
+        .fa-play:hover{
+            cursor: pointer;
+            background: black;
+            color: white;
+            transition: .6s;
+        }
+
+        .fa-circle-info:hover{
+            cursor: pointer;
+            background: black;
+            color: white;
+            transition: .6s;
+        }
+        
+
+
+        button{
+            background: transparent;
+            padding: 50px;
+            box-shadow: 0 15px 40px -20px black;
+        }
+
+        .members{
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            margin: 4rem;
+            font-size: 1.8rem;
+            box-sizing: border-box;
+            box-shadow: 0 15px 40px -20px black;
+            border-radius: 20px;
+            background: grey;
+            padding: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .title img{
+            height: 40rem;
+            
+        }
+
+        
+    </style>
+</head>
+<body>
+    <div class="title">
+        <img src="images/LOGO.png" alt="">
+        <div class="icons">
+            <a href="subjects.html"><button  class="fa-solid fa-play" >Play Now</button></a>
+            <a href="instructions.html"><button  class="fa-solid fa-circle-info" >How to Play</button></a>
+            
+        </div>
+        <div class="members">
+            <h4>12S4-G2: Tolsa, Antonio, Gregorio, Ogoc, Tamayo, Trinchera</h4>
+        </div>
+    </div>
+</body>
+</html>

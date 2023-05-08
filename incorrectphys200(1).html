@@ -1,0 +1,39 @@
+<body>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+    body{
+      display: flex;
+      justify-content: center;
+      text-align: center;
+      padding: 5rem;
+      font-size: 1.5rem;
+      background: #033890;
+      font-family: 'Poppins', sans-serif;
+  }
+
+
+  button{
+    font-size: 30px;
+    border-radius: 20px;
+    background: gold;
+  }
+  </style>
+  <div class="result">
+      <h1>Incorrect answer!</h1>
+      <h1>Correct answer: 60</h1>
+      <h3>Solution: n1sin(i) = n2sin(r) -> sin(r) =  (sin(45))/1.5  = 0.4714 -> r =〖 sin〗^(-1) (0.4714) = 28.07 degrees</h3>
+      <h3>However, this is the angle of refraction with respect to the normal to the glass surface. The angle of refraction with respect to the incident ray is: 90 degrees - r = 61.93 degrees</h3>
+      <button id="continueBtn">Continue -----></button>
+  </div>
+  <body>
+    <audio autoplay src="incorrect.mp3"></audio>
+  </body>
+
+  <script>
+      const continueBtn = document.querySelector('#continueBtn');
+      continueBtn.addEventListener('click', function() {
+        window.location.href = 'phys.html';
+      });
+  </script>
+</body>
+    

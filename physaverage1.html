@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Biology</title>
+</head>
+<body>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+        body{
+        background: #033890;
+        font-family: 'Poppins', sans-serif;
+        }
+
+        .choices{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+        margin-top: 50px;
+        gap: 2.5rem;
+        }
+
+        .question{
+        position: relative;
+        margin: 0 auto;
+        padding: 30px;
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        font-size: 25px;
+        margin-bottom: 50px;
+        }
+
+        button{
+        font-size: 40px;
+        border-radius: 20px;
+        background: transparent;
+        box-shadow: 0 15px 40px -20px black;
+        height: 250px;
+        width: 300px;
+        }
+
+    </style>
+    <div class="question">
+        <h1>A beam of light is incident on a flat piece of glass at an angle of incidence of 45 degrees. If the refractive index of glass is 1.5, what is the angle of refraction?</h1>
+    </div>
+	<div class="choices">
+        <button>30</button>
+        <button>45</button>
+        <button>60</button>
+        <button>90</button>
+        
+
+    </div>
+	
+    <script>
+        const smallIntestineBtn = document.querySelector('button:nth-of-type(1)');
+        const stomachBtn = document.querySelector('button:nth-of-type(2)');
+        const largeIntestineBtn = document.querySelector('button:nth-of-type(3)');
+        const anusBtn = document = document.querySelector('button:nth-of-type(4)');
+        
+        // Add event listeners to the buttons
+        smallIntestineBtn.addEventListener('click', displayIncorrectAlert);
+        stomachBtn.addEventListener('click', displayIncorrectAlert);
+        largeIntestineBtn.addEventListener('click', addPointsAndReturn);
+        anusBtn.addEventListener('click', displayIncorrectAlert);
+        
+        function addPointsAndReturn() {
+          // Add 100 points to the score
+          const body = document.querySelector('body');
+          body.innerHTML = '<h1>Correct answer!</h1>';
+          const score = parseInt(localStorage.getItem('score')) || 0;
+          localStorage.setItem('score', score + 250);
+          window.location.href = 'physcorrect.html';
+          // Redirect to the main file
+          
+        }
+        
+        function displayIncorrectAlert() {
+          // Display an alert that the answer is incorrect
+          window.location.href = 'incorrectphys200(1).html';
+          const score = parseInt(localStorage.getItem('score')) || 0;
+          localStorage.setItem('score', score - 250);
+          // Redirect to the main file
+          
+        }
+    </script>
+</body>
+</html>

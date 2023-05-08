@@ -1,0 +1,43 @@
+<body>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+    body{
+      display: flex;
+      justify-content: center;
+      text-align: center;
+      padding: 1rem;
+      font-size: 30px;
+      background: #033890;
+      font-family: 'Poppins', sans-serif;
+  }
+
+
+  button{
+    font-size: 30px;
+    border-radius: 20px;
+    background: gold;
+  }
+  </style>
+  <div class="result">
+      <h1>Incorrect answer!</h1>
+      <h1>Correct answer: g^' (x)=8x⋅7^(〖4x〗^2-6)   ln (7)</h1>
+      <h4>Solution: d/dx[a^u] = (ln a) a^u  du
+
+        g (x) =7^(4x^2-6)
+        g^' (x)=ln 7 (7^(4x^2-6))(8x)
+        g' (x) =8x⋅7^(4x^2-6)  ln⁡(7)
+        </h4>
+      <button id="continueBtn">Continue -----></button>
+  </div>
+  <body>
+    <audio autoplay src="incorrect.mp3"></audio>
+  </body>
+
+  <script>
+      const continueBtn = document.querySelector('#continueBtn');
+      continueBtn.addEventListener('click', function() {
+        window.location.href = 'cal.html';
+      });
+  </script>
+</body>
+    

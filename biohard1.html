@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Biology</title>
+</head>
+<body>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+        body{
+        background: #033890;
+        font-family: 'Poppins', sans-serif;
+        }
+
+        .choices{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+        margin-top: 50px;
+        gap: 2.5rem;
+        }
+
+        .question{
+        position: relative;
+        margin: 0 auto;
+        
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        font-size: 25px;
+        
+        }
+
+        button{
+        font-size: 40px;
+        border-radius: 20px;
+        background: transparent;
+        box-shadow: 0 15px 40px -20px black;
+        height: 250px;
+        width: 300px;
+        }
+        
+        .image{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+
+        .image img{
+          height: 20rem;
+        }
+        
+
+    </style>
+    <div class="question">
+        <h1>Identify the plant’s nutrient deficiency and its symptoms</h1>
+        
+    </div>
+    <div class="image">
+      <img src="images/Plant.png" alt="">
+    </div>
+	<div class="choices">
+        <button>Potassium</button>
+        <button>Boron</button>
+        <button>Calcium</button>
+        <button>Phosphate</button>
+        
+
+    </div>
+	
+    <script>
+        const smallIntestineBtn = document.querySelector('button:nth-of-type(1)');
+        const stomachBtn = document.querySelector('button:nth-of-type(2)');
+        const largeIntestineBtn = document.querySelector('button:nth-of-type(3)');
+        const anusBtn = document = document.querySelector('button:nth-of-type(4)');
+        
+        // Add event listeners to the buttons
+        smallIntestineBtn.addEventListener('click', displayIncorrectAlert);
+        stomachBtn.addEventListener('click', displayIncorrectAlert);
+        largeIntestineBtn.addEventListener('click', displayIncorrectAlert);
+        anusBtn.addEventListener('click', addPointsAndReturn);
+        
+        function addPointsAndReturn() {
+          // Add 100 points to the score
+          const body = document.querySelector('body');
+          body.innerHTML = '<h1>Correct answer!</h1>';
+          const score = parseInt(localStorage.getItem('score')) || 0;
+          localStorage.setItem('score', score + 300);
+          window.location.href = 'biocorrect.html';
+          // Redirect to the main file
+          
+        }
+        
+        function displayIncorrectAlert() {
+          // Display an alert that the answer is incorrect
+          window.location.href = 'incorrectbio300(1).html';
+          const score = parseInt(localStorage.getItem('score')) || 0;
+          localStorage.setItem('score', score - 300);
+          // Redirect to the main file
+          
+        }
+    </script>
+</body>
+</html>
