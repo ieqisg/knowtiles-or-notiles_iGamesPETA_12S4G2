@@ -107,7 +107,7 @@
           const body = document.querySelector('body');
           body.innerHTML = '<h1>Correct answer!</h1>';
           const score = parseInt(localStorage.getItem('score')) || 0;
-          localStorage.setItem('score', score + 250);
+          localStorage.setItem('score', score + 200);
           window.location.href = 'chemcorrect.html';
           // Redirect to the main file
           
@@ -117,7 +117,7 @@
           // Display an alert that the answer is incorrect
           window.location.href = 'incorrectchem200(1).html';
           const score = parseInt(localStorage.getItem('score')) || 0;
-          localStorage.setItem('score', score - 250);
+          localStorage.setItem('score', score - 200);
           // Redirect to the main file
           
         }

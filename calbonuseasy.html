@@ -78,12 +78,12 @@
             const body = document.querySelector('body');
             body.innerHTML = '<h1>Correct answer!</h1>';
             const score = parseInt(localStorage.getItem('score')) || 0;
-            localStorage.setItem('score', score + 300);
+            localStorage.setItem('score', score + 150);
             window.location.href = 'calcorrect.html';
         } else {
             window.location.href = 'incorrectcal150.html';
             const score = parseInt(localStorage.getItem('score')) || 0;
-            localStorage.setItem('score', score - 300);
+            localStorage.setItem('score', score - 150);
             window.location.href = 'incorrectcal150.html';
         }
         });

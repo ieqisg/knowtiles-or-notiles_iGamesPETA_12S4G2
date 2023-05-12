@@ -51,14 +51,14 @@
         font-size: 30px;
         border-radius: 20px;
         background: white;
-        color: #ff8646;
+        color: #48ab7f;
         box-shadow: 0 15px 40px -20px black;
         height: 250px;
         width: 300px;
         }
 
         button:hover{
-            background: #ff8646;
+            background: #48ab7f;
             color: white;
             transition: .9s;
             cursor: pointer;
@@ -106,7 +106,7 @@
           const body = document.querySelector('body');
           body.innerHTML = '<h1>Correct answer!</h1>';
           const score = parseInt(localStorage.getItem('score')) || 0;
-          localStorage.setItem('score', score + 250);
+          localStorage.setItem('score', score + 200);
           window.location.href = 'calcorrect.html';
           // Redirect to the main file
           
@@ -116,7 +116,7 @@
           // Display an alert that the answer is incorrect
           window.location.href = 'incorrectcal200(1).html';
           const score = parseInt(localStorage.getItem('score')) || 0;
-          localStorage.setItem('score', score - 250);
+          localStorage.setItem('score', score - 200);
           // Redirect to the main file
           
         }
